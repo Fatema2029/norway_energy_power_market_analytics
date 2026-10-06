@@ -1,27 +1,15 @@
 # norway_energy_power_market_analytics
 Power BI analysis of Norway’s electricity consumption, production, spot prices, energy balance and hydropower reservoir conditions across NO1–NO5.
-# Norway Energy & Power Market Analytics
+## Dashboard Preview
 
-## Project Overview
+### Norway Energy Overview
 
-## Business Questions
+![Norway Energy Overview](screenshots/01_overview.png)
 
-## Dashboard Pages
+### Power Market & Price Analysis
 
-## Data Sources
+![Power Market & Price Analysis](screenshots/05_power_market_price_analysis.png)
 
-## Data Model
+### Hydrology / Reservoir Context
 
-## Data Preparation
-
-## Key DAX Measures
-
-## Key Insights
-
-## Tools Used
-
-## Repository Structure
-
-## How to Use
-
-## Author
+![Hydrology Dashboard](screenshots/06_hydrology_reservoir_context.png)
