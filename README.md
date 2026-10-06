@@ -478,3 +478,115 @@ AVERAGE(ReservoirData[Weekly Change])
 This measure shows short-term changes in reservoir conditions.
 
 Positive values indicate increasing reservoir filling, while negative values indicate reservoir drawdown.
+
+## Dashboard Analysis
+
+The final Power BI report contains six analytical pages, each focusing on a different part of the Norwegian electricity system.
+
+---
+
+### 1. Norway Energy Overview
+
+The overview page provides a high-level summary of Norway’s electricity system.
+
+It includes:
+
+- Total Electricity Consumption
+- Total Electricity Production
+- Net Energy Balance
+- Renewable Share
+- Production Mix by Energy Source
+- Monthly Electricity Consumption vs Production
+- Year and Price Area slicers
+
+The page provides a quick overview of overall energy performance and makes it easy to compare consumption and production patterns over time.
+
+---
+
+### 2. Consumption Analysis
+
+The Consumption Analysis page focuses on electricity demand.
+
+It includes:
+
+- Electricity Consumption by Price Area
+- Electricity Consumption by Consumer Group
+- Monthly Electricity Consumption Trend
+- Average Electricity Consumption by Hour of Day
+- Year and Price Area slicers
+
+This page helps identify regional differences, the largest consumer categories, seasonal consumption patterns, and the typical daily demand profile.
+
+---
+
+### 3. Production Analysis
+
+The Production Analysis page focuses on electricity generation.
+
+It includes:
+
+- Electricity Production by Price Area
+- Electricity Production by Energy Source
+- Monthly Electricity Production Trend
+- Average Electricity Production by Hour of Day
+- Year and Price Area slicers
+
+This page highlights regional production differences and shows the strong contribution of hydropower to Norway’s electricity system.
+
+---
+
+### 4. Energy Balance
+
+The Energy Balance page compares electricity production and consumption.
+
+It includes:
+
+- Net Energy Balance KPI
+- Consumption vs Production by Price Area
+- Energy Balance by Price Area
+- Monthly Energy Balance Trend
+- Year and Price Area slicers
+
+The page helps identify which regions generate more electricity than they consume and which regions have a deficit.
+
+A positive energy balance indicates that production exceeds consumption, while a negative balance indicates that consumption exceeds production.
+
+---
+
+### 5. Power Market & Price Analysis
+
+The Power Market & Price Analysis page focuses on electricity spot prices and their relationship with electricity activity.
+
+It includes:
+
+- Average Spot Price KPI
+- Average Spot Price by Price Area
+- Monthly Spot Price Trend
+- Average Spot Price by Hour of Day
+- Spot Price vs Consumption and Production
+- Year and Price Area slicers
+
+This page helps identify how electricity prices vary between NO1–NO5, across months, and throughout the day.
+
+The combined chart also makes it possible to compare electricity prices with production and consumption patterns.
+
+---
+
+### 6. Hydrology & Reservoir Analysis
+
+The Hydrology & Reservoir Analysis page focuses on hydropower reservoir conditions.
+
+It includes:
+
+- Average Reservoir Filling KPI
+- Reservoir Filling Over Time
+- Average Reservoir Filling by Price Area
+- Weekly Change in Reservoir Filling
+- Reservoir Filling vs Spot Price
+- Year and Price Area slicers
+
+The page shows how reservoir levels change seasonally and how hydrological conditions differ across NO1–NO5.
+
+Weekly reservoir change provides a short-term view of whether reservoirs are being replenished or drawn down.
+
+The comparison between reservoir filling and spot prices provides additional market context, although it should be interpreted as a relationship rather than proof of causation.
