@@ -316,3 +316,165 @@ The dimension contains:
 The Price Area dimension allows the same regional slicer to filter electricity consumption, production, spot-price, and hydropower reservoir data consistently.
 
 Using separate Date and Price Area dimensions also reduces duplication and creates a cleaner analytical model.
+
+## Key DAX Measures
+
+Several DAX measures were created to support the main KPIs and analytical visuals across the dashboard.
+
+### Total Electricity Consumption
+
+```DAX
+Total Consumption kWh =
+SUM(Consumption[Consumption kWh])
+```
+
+This measure calculates total electricity consumption and is used across the Overview, Consumption Analysis, Energy Balance, and Power Market pages.
+
+---
+
+### Total Electricity Production
+
+```DAX
+Total Production kWh =
+SUM(Production[Production kWh])
+```
+
+This measure calculates total electricity generation and is used across the Overview, Production Analysis, Energy Balance, and Power Market pages.
+
+---
+
+### Energy Balance
+
+```DAX
+Energy Balance kWh =
+[Total Production kWh] - [Total Consumption kWh]
+```
+
+A positive value indicates that electricity production exceeds consumption, while a negative value indicates that consumption exceeds production.
+
+---
+
+### Renewable Production
+
+```DAX
+Renewable Production kWh =
+CALCULATE(
+    [Total Production kWh],
+    Production[Production Group] IN {
+        "Hydro unspecified",
+        "Wind unspecified",
+        "Solar unspecified"
+    }
+)
+```
+
+This measure calculates electricity production from renewable sources.
+
+---
+
+### Renewable Share
+
+```DAX
+Renewable Share % =
+DIVIDE(
+    [Renewable Production kWh],
+    [Total Production kWh],
+    0
+)
+```
+
+This measure calculates the share of total electricity generation coming from renewable sources.
+
+---
+
+### Average Hourly Consumption
+
+```DAX
+Average Hourly Consumption kWh =
+AVERAGEX(
+    VALUES(Consumption[Date]),
+    CALCULATE([Total Consumption kWh])
+)
+```
+
+This measure supports the analysis of the typical hourly electricity consumption pattern.
+
+---
+
+### Average Hourly Production
+
+```DAX
+Average Hourly Production kWh =
+AVERAGEX(
+    VALUES(Production[Date]),
+    CALCULATE([Total Production kWh])
+)
+```
+
+This measure supports the analysis of the typical hourly electricity production pattern.
+
+---
+
+### Average Spot Price
+
+```DAX
+Average Spot Price NOK/kWh =
+AVERAGE(SpotPrice[Spot Price NOK/kWh])
+```
+
+This measure calculates the average electricity spot price and is used for regional, monthly, and hourly price analysis.
+
+---
+
+### Average Reservoir Filling
+
+```DAX
+Average Reservoir Filling =
+AVERAGE(ReservoirData[Reservoir Filling])
+```
+
+This measure calculates the average hydropower reservoir filling level.
+
+---
+
+### Average Reservoir Filling Clean
+
+```DAX
+Average Reservoir Filling Clean =
+CALCULATE(
+    AVERAGE(ReservoirData[Reservoir Filling]),
+    ReservoirData[Price Area] IN {
+        "NO1",
+        "NO2",
+        "NO3",
+        "NO4",
+        "NO5"
+    }
+)
+```
+
+This measure restricts reservoir analysis to the five Norwegian electricity price areas.
+
+---
+
+### Average Stored Hydropower Energy
+
+```DAX
+Average Stored Energy TWh =
+AVERAGE(ReservoirData[Store Energy TWh])
+```
+
+This measure calculates average stored hydropower energy in TWh.
+
+---
+
+### Average Weekly Reservoir Change
+
+```DAX
+Average Weekly Change =
+AVERAGE(ReservoirData[Weekly Change])
+```
+
+This measure shows short-term changes in reservoir conditions.
+
+Positive values indicate increasing reservoir filling, while negative values indicate reservoir drawdown.
