@@ -147,3 +147,22 @@ The reservoir dataset was used to analyse:
 - Regional hydrological differences
 - Weekly reservoir changes
 - Reservoir conditions in relation to electricity spot prices
+
+## Data Coverage
+
+The analysis focuses on Norway’s five electricity price areas:
+
+- NO1 – Eastern Norway
+- NO2 – Southern Norway
+- NO3 – Central Norway
+- NO4 – Northern Norway
+- NO5 – Western Norway
+
+The datasets contain different time granularities:
+
+- Electricity consumption: hourly
+- Electricity production: hourly
+- Spot prices: hourly
+- Reservoir statistics: weekly
+
+Because the reservoir dataset is weekly while the other datasets are more detailed, aggregation was necessary when combining hydrological and electricity-market information.
