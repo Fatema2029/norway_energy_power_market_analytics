@@ -323,3 +323,14 @@ ADDCOLUMNS(
     "Quarter", "Q" & FORMAT([Date], "Q"),
     "Year-Month", FORMAT([Date], "YYYY-MM")
 )
+
+YearMonthSort =
+YEAR(DateTable[Date]) * 100 +
+MONTH(DateTable[Date])
+
+
+The key thing is: **make sure there is a blank line before and after each code block**.
+
+Also, from your screenshot, the formula itself looks fine. So nothing is broken — GitHub is just displaying it as formatted code.
+
+If you want, we can also make the README a little cleaner by **not showing the full DateTable code at all** and only showing the most important DAX measures. That often looks better for recruiters.
