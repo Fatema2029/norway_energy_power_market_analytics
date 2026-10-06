@@ -137,57 +137,17 @@ Overall, the transformation process ensured that the four main fact tables follo
 
 ## Data Model and Relationships
 
-A structured star-style data model was created in Power BI to connect the different datasets through shared dimension tables.
+The Power BI model was designed to connect the different datasets through shared dimensions rather than linking the fact tables directly to one another. This created a cleaner and more reliable structure for filtering and analysis across the dashboard.
 
-The main fact tables are:
+The main fact tables in the model are Consumption, Production, SpotPrice, and ReservoirData. Each of these tables contains transactional or time-based information for a specific part of the electricity system. To make it possible to analyse them together, two shared dimension tables were used: DateTable and PriceArea.
 
-- Consumption
-- Production
-- SpotPrice
-- ReservoirData
+The DateTable provides a common calendar structure for the project. It connects the consumption, production, spot-price, and reservoir datasets through their date fields. This allows the same Year and Month filters to work consistently across multiple dashboard pages, even though the underlying datasets come from different sources.
 
-The main dimension tables are:
+The PriceArea dimension performs a similar role for regional analysis. It contains the five Norwegian bidding zones, NO1 to NO5, and connects to the corresponding Price Area field in each fact table. This makes it possible to use one common Price Area slicer to filter consumption, production, spot prices, and reservoir conditions at the same time.
 
-- DateTable
-- PriceArea
+The relationships were created as one-to-many relationships, with the dimension tables on the one side and the fact tables on the many side. Cross-filter direction was kept as Single, which helps maintain a clear flow of filters and reduces the risk of ambiguous relationships in the model.
 
-The relationships were created as one-to-many relationships, with the dimension tables on the one side and the fact tables on the many side.
-
-### Date Relationships
-
-- DateTable[Date] → Consumption[Date]
-- DateTable[Date] → Production[Date]
-- DateTable[Date] → SpotPrice[Date]
-- DateTable[Date] → ReservoirData[dato_Id]
-
-### Price Area Relationships
-
-- PriceArea[Price Area] → Consumption[Price Area]
-- PriceArea[Price Area] → Production[Price Area]
-- PriceArea[Price Area] → SpotPrice[Price Area]
-- PriceArea[Price Area] → ReservoirData[Price Area]
-
-Cross-filter direction was kept as **Single** to maintain a clean and controlled model structure.
-
-This setup allows the same Year and Price Area slicers to filter multiple datasets consistently across the dashboard.
-
----
-
-## Price Area Dimension
-
-A dedicated Price Area dimension was used to standardise Norway's five electricity bidding zones across the different datasets.
-
-The dimension contains:
-
-- NO1
-- NO2
-- NO3
-- NO4
-- NO5
-
-The Price Area dimension allows the same regional slicer to filter electricity consumption, production, spot-price, and hydropower reservoir data consistently.
-
-Using separate Date and Price Area dimensions also reduces duplication and creates a cleaner analytical model.
+Using this structure made the dashboard more consistent and easier to manage. Instead of creating separate filters for each dataset, the shared dimensions allow the same selections to control multiple analyses, supporting reliable comparisons across the six dashboard pages.
 
 ## Key DAX Measures
 
