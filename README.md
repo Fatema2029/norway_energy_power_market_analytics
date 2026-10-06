@@ -568,17 +568,7 @@ The analysis highlights the importance of hydropower in Norway, the seasonal nat
 
 Overall, the project strengthened practical skills in **Power BI, Power Query, DAX, data modelling, data visualisation, and energy-market analysis**, while also providing experience working with real-world public datasets.
 
-## Data Sources and References
-
-This project was built using publicly available data from official Norwegian energy sources.
-
-The electricity consumption and production datasets were obtained from **Elhub**, which provides open aggregated data for the Norwegian electricity market. The project used hourly consumption data by price area and consumer group, together with hourly production data by price area and production group. Elhub publishes these datasets through its open data catalogue and API services. :chatgpt-content-reference{index="0"}
-
-Historical electricity spot prices were obtained from **Forbrukerrådet's electricity price service**. The historical data is based on Nord Pool spot prices and covers Norway's five price areas, NO1–NO5. The values are provided in NOK per kWh and were used for the regional, monthly, and hourly price analysis in the dashboard. :chatgpt-content-reference{index="1"}
-
-Hydropower reservoir statistics were obtained from the **Norwegian Water Resources and Energy Directorate (NVE)**. NVE publishes weekly reservoir statistics covering reservoir filling levels, changes from the previous week, and stored energy. These data were used to analyse seasonal hydrological conditions and to compare reservoir developments with electricity spot prices. :chatgpt-content-reference{index="2"}
-
-### References
+### Data Source References
 
 - Elhub – Open Data Catalogue  
   https://elhub.no/data-og-innsikt/datakatalog
