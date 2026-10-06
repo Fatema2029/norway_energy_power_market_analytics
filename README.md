@@ -40,6 +40,56 @@ The main objectives of this project were to:
 - Build an interactive Power BI dashboard using multiple datasets and a structured data model.
 - Strengthen practical skills in Power Query, DAX, data modelling, and business-oriented data visualisation.
 
+## Dashboard Preview
+
+The Power BI report contains six interactive pages covering electricity consumption, production, regional energy balance, market prices, and hydropower conditions in Norway.
+
+### 1. Norway Energy Overview
+
+![Norway Energy Overview](1.%20Energy%20overview.png)
+
+The overview provides a high-level view of total electricity consumption, production, energy balance, renewable share, production mix, and monthly consumption versus production.
+
+---
+
+### 2. Consumption Analysis
+
+![Consumption Analysis](2.%20Consumption.png)
+
+This page analyses electricity consumption across Norwegian price areas and consumer groups, together with monthly and hourly demand patterns.
+
+---
+
+### 3. Production Analysis
+
+![Production Analysis](3.%20Production.png)
+
+This page examines electricity production across NO1–NO5, the contribution of different energy sources, and monthly and hourly production patterns.
+
+---
+
+### 4. Energy Balance
+
+![Energy Balance](4.%20Energy%20Balance.png)
+
+This page compares electricity production with consumption and highlights regional electricity surpluses and deficits across the Norwegian price areas.
+
+---
+
+### 5. Power Market & Price Analysis
+
+![Power Market and Price Analysis](5.%20Power%20market%3A%20price%20analysis.png)
+
+This page analyses electricity spot prices across NO1–NO5, monthly and hourly price movements, and the relationship between spot prices, electricity consumption, and production.
+
+---
+
+### 6. Hydrology & Reservoir Context
+
+![Hydrology and Reservoir Context](6.%20Hydrology%3A%20reservoir%20context.png)
+
+This page analyses reservoir filling levels, regional hydrological differences, weekly changes in reservoir filling, and the relationship between reservoir conditions and electricity spot prices.
+
 ## Business Questions
 
 The dashboard was designed to answer the following questions:
