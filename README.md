@@ -24,3 +24,18 @@ The final Power BI report contains six analytical dashboard pages:
 4. Energy Balance
 5. Power Market & Price Analysis
 6. Hydrology & Reservoir Analysis
+
+## Project Objectives
+
+The main objectives of this project were to:
+
+- Analyse electricity consumption and production across Norway.
+- Compare energy activity across the five Norwegian price areas, NO1–NO5.
+- Examine the contribution of different electricity production sources.
+- Identify regional electricity surpluses and deficits.
+- Analyse monthly and hourly spot-price patterns.
+- Investigate seasonal changes in hydropower reservoir filling.
+- Compare hydrological conditions across Norwegian price areas.
+- Explore the relationship between reservoir conditions and electricity spot prices.
+- Build an interactive Power BI dashboard using multiple datasets and a structured data model.
+- Strengthen practical skills in Power Query, DAX, data modelling, and business-oriented data visualisation.
