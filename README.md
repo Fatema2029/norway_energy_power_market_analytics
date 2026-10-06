@@ -25,20 +25,13 @@ The final Power BI report contains six analytical dashboard pages:
 5. Power Market & Price Analysis
 6. Hydrology & Reservoir Analysis
 
-## Project Objectives
+## Project Objective
 
-The main objectives of this project were to:
+The objective of this project was to build a comprehensive Power BI dashboard that provides a clear and practical understanding of Norway’s electricity system by combining several related datasets into one analytical model. Rather than looking at electricity consumption, production, prices, or hydropower conditions separately, the aim was to connect these elements and examine how they interact across Norway’s five electricity price areas, NO1–NO5.
 
-- Analyse electricity consumption and production across Norway.
-- Compare energy activity across the five Norwegian price areas, NO1–NO5.
-- Examine the contribution of different electricity production sources.
-- Identify regional electricity surpluses and deficits.
-- Analyse monthly and hourly spot-price patterns.
-- Investigate seasonal changes in hydropower reservoir filling.
-- Compare hydrological conditions across Norwegian price areas.
-- Explore the relationship between reservoir conditions and electricity spot prices.
-- Build an interactive Power BI dashboard using multiple datasets and a structured data model.
-- Strengthen practical skills in Power Query, DAX, data modelling, and business-oriented data visualisation.
+The project was designed to explore both operational and market-related questions. This included analysing how electricity consumption and production vary across regions and over time, identifying the main sources of electricity generation, comparing regional energy surpluses and deficits, and examining how spot prices differ between price areas and throughout the day. Because hydropower plays such an important role in Norway’s electricity system, reservoir filling levels and weekly changes were also included to provide additional context around generation conditions and electricity-market behaviour.
+
+From a technical perspective, another important objective was to strengthen practical Power BI skills by working with multiple real-world datasets. This involved cleaning and transforming data in Power Query, reshaping spot-price data, building relationships between fact and dimension tables, creating DAX measures, and designing interactive visuals that could be filtered by year and price area. Overall, the project was intended to demonstrate how Power BI can be used to turn complex energy data into a structured and understandable analytical dashboard.
 
 ## Dashboard Preview
 
@@ -119,25 +112,6 @@ To add a market perspective, I also used historical electricity spot-price data 
 For the hydrology analysis, I used reservoir statistics from the **Norwegian Water Resources and Energy Directorate (NVE)**. The data was retrieved through NVE's public API and includes weekly reservoir filling, stored hydropower energy, reservoir capacity, and weekly changes in filling levels. This added an important hydrological dimension to the project, particularly because hydropower plays such a large role in Norwegian electricity production.
 
 Together, these sources made it possible to analyse the power system from several perspectives: electricity demand, generation, regional balance, market prices, and reservoir conditions.
-
-## Data Coverage
-
-The analysis focuses on Norway’s five electricity price areas:
-
-- NO1 – Eastern Norway
-- NO2 – Southern Norway
-- NO3 – Central Norway
-- NO4 – Northern Norway
-- NO5 – Western Norway
-
-The datasets contain different time granularities:
-
-- Electricity consumption: hourly
-- Electricity production: hourly
-- Spot prices: hourly
-- Reservoir statistics: weekly
-
-Because the reservoir dataset is weekly while the other datasets are more detailed, aggregation was necessary when combining hydrological and electricity-market information.
 
 ## Data Preparation and Transformation
 
