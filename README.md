@@ -669,3 +669,93 @@ However, the relationship should not be interpreted as direct causation because 
 - Imports and exports
 - Weather conditions
 - European electricity-market conditions
+
+## Project Challenges and Limitations
+
+Several practical challenges were addressed during the development of this project.
+
+### Data Integration
+
+The project combines multiple datasets with different structures and time granularities.
+
+For example:
+
+- Electricity consumption data is hourly.
+- Electricity production data is hourly.
+- Spot-price data is hourly.
+- Reservoir data is weekly.
+
+This required careful preparation and aggregation before the datasets could be analysed together.
+
+---
+
+### Data Transformation
+
+The spot-price dataset originally stored NO1–NO5 as separate columns.
+
+To make the data suitable for analysis, these columns were unpivoted into:
+
+- Price Area
+- Spot Price NOK/kWh
+
+This made it possible to connect the spot-price data to the common Price Area dimension.
+
+---
+
+### Standardising Regional Data
+
+The different datasets did not always use identical structures for regional information.
+
+Price-area identifiers had to be standardised so that NO1–NO5 could be used consistently across:
+
+- Consumption
+- Production
+- Spot prices
+- Reservoir data
+
+---
+
+### Handling Blank and Unmatched Values
+
+Some regional and hydrological records produced blank or unmatched values during modelling.
+
+These issues were handled through data cleaning, filtering, and dedicated measures to ensure that the dashboard focuses on the five valid Norwegian price areas.
+
+---
+
+### Map Visualisation
+
+A custom map showing Norway’s electricity price areas was explored during development.
+
+However, Power BI’s mapping limitations and account requirements made the custom NO1–NO5 map unreliable for the final report.
+
+Instead, regional comparisons were presented using bar and column charts, which provide a clearer and more stable analytical view.
+
+---
+
+### Different Time Granularities
+
+Reservoir statistics are reported weekly, while the electricity and price datasets contain hourly observations.
+
+Because of this difference, hydrology and electricity-market comparisons require aggregation.
+
+The comparison between reservoir filling and spot prices should therefore be interpreted as a descriptive relationship rather than an exact one-to-one time comparison.
+
+---
+
+## Limitations
+
+The dashboard provides a broad analytical view of Norway’s electricity system, but it does not include every factor that influences electricity-market outcomes.
+
+Important factors not fully included in the current model include:
+
+- Weather and temperature
+- Precipitation and snowmelt
+- Electricity imports and exports
+- Transmission constraints
+- Interconnector flows
+- European electricity and fuel prices
+- Power-plant outages
+- Market expectations
+
+Therefore, relationships identified in the dashboard should not be interpreted as proof of causation.
