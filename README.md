@@ -530,7 +530,7 @@ However, the relationship should not be interpreted as direct causation because 
 - Weather conditions
 - European electricity-market conditions
 
-## Project Challenges and Limitations
+## Project Challenges
 
 Several practical challenges were addressed during the development of this project.
 
@@ -602,23 +602,6 @@ Because of this difference, hydrology and electricity-market comparisons require
 The comparison between reservoir filling and spot prices should therefore be interpreted as a descriptive relationship rather than an exact one-to-one time comparison.
 
 ---
-
-## Limitations
-
-The dashboard provides a broad analytical view of Norway’s electricity system, but it does not include every factor that influences electricity-market outcomes.
-
-Important factors not fully included in the current model include:
-
-- Weather and temperature
-- Precipitation and snowmelt
-- Electricity imports and exports
-- Transmission constraints
-- Interconnector flows
-- European electricity and fuel prices
-- Power-plant outages
-- Market expectations
-
-Therefore, relationships identified in the dashboard should not be interpreted as proof of causation.
 
 ## Future Improvements
 
