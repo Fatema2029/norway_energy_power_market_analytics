@@ -39,3 +39,21 @@ The main objectives of this project were to:
 - Explore the relationship between reservoir conditions and electricity spot prices.
 - Build an interactive Power BI dashboard using multiple datasets and a structured data model.
 - Strengthen practical skills in Power Query, DAX, data modelling, and business-oriented data visualisation.
+
+## Business Questions
+
+The dashboard was designed to answer the following questions:
+
+- How much electricity is consumed and produced in Norway?
+- How does electricity consumption differ between NO1–NO5?
+- Which consumer groups account for the highest electricity consumption?
+- How does electricity production differ across price areas?
+- Which energy sources dominate Norwegian electricity production?
+- Which price areas produce more electricity than they consume?
+- How does the electricity balance change over time?
+- How do spot prices differ across NO1–NO5?
+- How do electricity prices change by month and hour of the day?
+- How do production and consumption compare with electricity prices?
+- How do hydropower reservoir levels change over time?
+- How do reservoir conditions differ across Norwegian price areas?
+- Is there a visible relationship between reservoir filling and electricity spot prices?
