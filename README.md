@@ -166,3 +166,30 @@ The datasets contain different time granularities:
 - Reservoir statistics: weekly
 
 Because the reservoir dataset is weekly while the other datasets are more detailed, aggregation was necessary when combining hydrological and electricity-market information.
+
+## Data Preparation and Transformation
+
+Power Query was used to clean, reshape, and standardise the datasets before loading them into the Power BI data model.
+
+### Consumption Data Preparation
+
+The electricity consumption dataset was cleaned and transformed by:
+
+- Removing unnecessary columns.
+- Removing fields that were not required for analysis.
+- Creating a clean Date field.
+- Extracting Year, Month, Month Number, and Hour.
+- Standardising the Price Area field.
+- Checking and correcting data types.
+- Preparing the consumption values for analysis in kWh.
+
+The final consumption table includes fields such as:
+
+- Date
+- Year
+- Month
+- Month Number
+- Hour
+- Price Area
+- Consumption Group
+- Consumption kWh
