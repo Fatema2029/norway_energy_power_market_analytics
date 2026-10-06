@@ -590,3 +590,82 @@ The page shows how reservoir levels change seasonally and how hydrological condi
 Weekly reservoir change provides a short-term view of whether reservoirs are being replenished or drawn down.
 
 The comparison between reservoir filling and spot prices provides additional market context, although it should be interpreted as a relationship rather than proof of causation.
+
+## Key Insights and Findings
+
+The dashboard highlights several important patterns in Norway’s electricity system.
+
+### Hydropower Dominates Electricity Production
+
+Hydropower represents the largest share of electricity generation in the dataset.
+
+Wind contributes a smaller but still significant share, while thermal, solar, and other sources account for much smaller proportions.
+
+This confirms the strong dependence of the Norwegian electricity system on hydropower.
+
+---
+
+### Electricity Consumption Shows Clear Seasonal Patterns
+
+Electricity demand changes significantly throughout the year.
+
+Consumption tends to increase during colder periods and decrease during warmer months.
+
+This reflects the importance of heating and seasonal energy demand in Norway.
+
+---
+
+### Regional Differences Are Significant
+
+The five Norwegian price areas show noticeable differences in:
+
+- Electricity consumption
+- Electricity production
+- Energy balance
+- Spot prices
+- Reservoir conditions
+
+This demonstrates why regional analysis is important when examining the Norwegian power market.
+
+---
+
+### Production and Consumption Are Not Evenly Balanced Across Regions
+
+Some price areas produce more electricity than they consume, while others show a lower production-to-consumption balance.
+
+The Energy Balance page helps identify regional electricity surpluses and deficits.
+
+---
+
+### Spot Prices Vary Across Time and Price Areas
+
+Electricity spot prices differ between NO1–NO5 and also change considerably over time.
+
+The monthly and hourly analyses show that spot prices are influenced by both seasonal and short-term market conditions.
+
+---
+
+### Reservoir Levels Follow a Strong Seasonal Cycle
+
+Reservoir filling levels rise and fall throughout the year.
+
+The pattern reflects periods of water inflow, storage, and hydropower generation.
+
+The Weekly Change measure gives an additional short-term view of whether reservoir levels are increasing or decreasing.
+
+---
+
+### Hydrology Provides Important Market Context
+
+Reservoir conditions are highly relevant in a hydropower-dominated electricity system.
+
+Comparing reservoir filling with spot prices helps provide context for electricity-market developments.
+
+However, the relationship should not be interpreted as direct causation because electricity prices are also affected by many other factors, including:
+
+- Electricity demand
+- Generation availability
+- Transmission constraints
+- Imports and exports
+- Weather conditions
+- European electricity-market conditions
