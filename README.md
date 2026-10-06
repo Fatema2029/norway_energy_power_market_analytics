@@ -262,3 +262,66 @@ The final reservoir dataset contains fields such as:
 - Stored Energy TWh
 - Previous Week Filling
 - Weekly Change
+
+## Data Model and Relationships
+
+A structured star-style data model was created in Power BI to connect the different datasets through shared dimension tables.
+
+The main fact tables are:
+
+- Consumption
+- Production
+- SpotPrice
+- ReservoirData
+
+The main dimension tables are:
+
+- DateTable
+- PriceArea
+
+The relationships were created as one-to-many relationships, with the dimension tables on the one side and the fact tables on the many side.
+
+### Date Relationships
+
+- DateTable[Date] → Consumption[Date]
+- DateTable[Date] → Production[Date]
+- DateTable[Date] → SpotPrice[Date]
+- DateTable[Date] → ReservoirData[Date]
+
+### Price Area Relationships
+
+- PriceArea[Price Area] → Consumption[Price Area]
+- PriceArea[Price Area] → Production[Price Area]
+- PriceArea[Price Area] → SpotPrice[Price Area]
+- PriceArea[Price Area] → ReservoirData[Price Area]
+
+Cross-filter direction was kept as Single to maintain a clean and controlled model structure.
+
+This setup allows the same Year and Price Area slicers to filter multiple datasets consistently across the dashboard.
+
+## Date Table
+
+A dedicated Date table was created to support consistent time-based analysis across the project.
+
+```DAX
+DateTable =
+VAR AllDates =
+    UNION(
+        SELECTCOLUMNS(Consumption, "DateValue", Consumption[Date]),
+        SELECTCOLUMNS(Production, "DateValue", Production[Date]),
+        SELECTCOLUMNS(SpotPrice, "DateValue", SpotPrice[Date])
+    )
+RETURN
+ADDCOLUMNS(
+    CALENDAR(
+        MINX(AllDates, [DateValue]),
+        MAXX(AllDates, [DateValue])
+    ),
+    "Year", YEAR([Date]),
+    "Month Number", MONTH([Date]),
+    "Month", FORMAT([Date], "MMMM"),
+    "Quarter", "Q" & FORMAT([Date], "Q"),
+    "Year-Month", FORMAT([Date], "YYYY-MM")
+)
+
+
