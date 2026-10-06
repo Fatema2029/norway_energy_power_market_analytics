@@ -819,3 +819,22 @@ A future version could automate data retrieval and refresh so that the dashboard
 This could be implemented through API connections, Power Query, and scheduled refresh in the Power BI Service.
 
 Automated refresh would make the project more suitable for continuous energy-market monitoring rather than only historical analysis.
+
+## Conclusion
+
+This project demonstrates how multiple public energy datasets can be combined in Power BI to create a structured view of Norway’s electricity system.
+
+By integrating electricity consumption, production, regional energy balance, spot prices, and hydropower reservoir data, the dashboard provides both operational and market-level insights across the five Norwegian price areas, NO1–NO5.
+
+The project shows how Power BI can be used not only for visualisation, but also for:
+
+- Cleaning and transforming raw data
+- Building relationships across multiple datasets
+- Creating DAX measures and KPIs
+- Analysing time-based and regional patterns
+- Comparing physical electricity-system conditions with market prices
+- Communicating complex energy data through interactive dashboards
+
+The analysis highlights the importance of hydropower in Norway, the seasonal nature of electricity consumption and reservoir conditions, and the significant regional differences in production, energy balance, and spot prices.
+
+Overall, the project strengthened practical skills in **Power BI, Power Query, DAX, data modelling, data visualisation, and energy-market analysis**, while also providing experience working with real-world public datasets.
