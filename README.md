@@ -193,3 +193,72 @@ The final consumption table includes fields such as:
 - Price Area
 - Consumption Group
 - Consumption kWh
+
+### Production Data Preparation
+
+The electricity production dataset was prepared using a similar process.
+
+The main transformation steps included:
+
+- Removing unnecessary columns.
+- Creating a clean Date field.
+- Extracting Year, Month, Month Number, and Hour.
+- Standardising Price Area values.
+- Checking numeric data types.
+- Preparing production values for analysis in kWh.
+- Simplifying the production-source categories for clearer reporting.
+
+A calculated column was created to group production sources into cleaner categories such as Hydro, Wind, Solar, Thermal, and Other.
+
+### Spot Price Data Preparation
+
+The original spot-price dataset contained separate columns for each Norwegian price area:
+
+- NO1
+- NO2
+- NO3
+- NO4
+- NO5
+
+The dataset was transformed from wide format into long format using Power Query.
+
+The NO1–NO5 columns were unpivoted into:
+
+- Price Area
+- Spot Price NOK/kWh
+
+Additional fields were then created for:
+
+- Date
+- Hour
+
+This transformation made the data easier to connect to the shared Date and Price Area dimension tables.
+
+### Reservoir Data Preparation
+
+Hydropower reservoir statistics were retrieved from the NVE public API and transformed in Power Query.
+
+The main preparation steps included:
+
+- Expanding the API records.
+- Renaming technical field names into more readable business names.
+- Converting the date field into Date format.
+- Keeping the relevant hydrological fields.
+- Filtering the data to the required analytical period.
+- Creating a Price Area field from the NVE area number.
+- Restricting the analysis to NO1–NO5.
+- Formatting Reservoir Filling as a percentage.
+- Preparing Stored Energy values in TWh.
+- Preparing Weekly Change for percentage analysis.
+
+The final reservoir dataset contains fields such as:
+
+- Date
+- Year
+- Week
+- Price Area
+- Reservoir Filling
+- Capacity TWh
+- Stored Energy TWh
+- Previous Week Filling
+- Weekly Change
