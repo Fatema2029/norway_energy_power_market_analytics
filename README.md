@@ -286,7 +286,7 @@ The relationships were created as one-to-many relationships, with the dimension 
 - DateTable[Date] → Consumption[Date]
 - DateTable[Date] → Production[Date]
 - DateTable[Date] → SpotPrice[Date]
-- DateTable[Date] → ReservoirData[Date]
+- DateTable[Date] → ReservoirData[dato_Id]
 
 ### Price Area Relationships
 
@@ -295,9 +295,11 @@ The relationships were created as one-to-many relationships, with the dimension 
 - PriceArea[Price Area] → SpotPrice[Price Area]
 - PriceArea[Price Area] → ReservoirData[Price Area]
 
-Cross-filter direction was kept as Single to maintain a clean and controlled model structure.
+Cross-filter direction was kept as **Single** to maintain a clean and controlled model structure.
 
 This setup allows the same Year and Price Area slicers to filter multiple datasets consistently across the dashboard.
+
+---
 
 ## Date Table
 
@@ -323,14 +325,32 @@ ADDCOLUMNS(
     "Quarter", "Q" & FORMAT([Date], "Q"),
     "Year-Month", FORMAT([Date], "YYYY-MM")
 )
+```
 
+A separate sorting column was also created to ensure that Year-Month values appear in chronological order.
+
+```DAX
 YearMonthSort =
 YEAR(DateTable[Date]) * 100 +
 MONTH(DateTable[Date])
+```
 
+The `Year-Month` field was then sorted by `YearMonthSort`.
 
-The key thing is: **make sure there is a blank line before and after each code block**.
+---
 
-Also, from your screenshot, the formula itself looks fine. So nothing is broken — GitHub is just displaying it as formatted code.
+## Price Area Dimension
 
-If you want, we can also make the README a little cleaner by **not showing the full DateTable code at all** and only showing the most important DAX measures. That often looks better for recruiters.
+A dedicated Price Area dimension was used to standardise Norway's five electricity bidding zones across the different datasets.
+
+The dimension contains:
+
+- NO1
+- NO2
+- NO3
+- NO4
+- NO5
+
+The Price Area dimension allows the same regional slicer to filter electricity consumption, production, spot-price, and hydropower reservoir data consistently.
+
+Using separate Date and Price Area dimensions also reduces duplication and creates a cleaner analytical model.
