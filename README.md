@@ -57,3 +57,93 @@ The dashboard was designed to answer the following questions:
 - How do hydropower reservoir levels change over time?
 - How do reservoir conditions differ across Norwegian price areas?
 - Is there a visible relationship between reservoir filling and electricity spot prices?
+
+## Data Sources
+
+This project combines multiple publicly available Norwegian energy datasets.
+
+### Electricity Consumption Data
+
+**Source:** Elhub
+
+The consumption dataset contains electricity usage information by:
+
+- Date and time
+- Price area
+- Consumer group
+- Electricity consumption in kWh
+
+The data was used to analyse:
+
+- Total electricity consumption
+- Regional consumption differences
+- Consumption by consumer group
+- Monthly consumption trends
+- Hourly consumption patterns
+
+### Electricity Production Data
+
+**Source:** Elhub
+
+The production dataset contains electricity generation information by:
+
+- Date and time
+- Price area
+- Production source
+- Electricity production in kWh
+
+The data was used to analyse:
+
+- Total electricity production
+- Regional production differences
+- Production by energy source
+- Monthly production trends
+- Hourly production patterns
+
+### Electricity Spot Price Data
+
+**Source:** Historical Norwegian electricity spot-price data
+
+The spot-price dataset contains electricity prices for Norway’s five bidding zones:
+
+- NO1
+- NO2
+- NO3
+- NO4
+- NO5
+
+The data was transformed and analysed in NOK/kWh.
+
+It was used to analyse:
+
+- Average electricity spot price
+- Regional price differences
+- Monthly spot-price trends
+- Hourly spot-price patterns
+- Spot price in relation to electricity consumption and production
+
+### Hydropower Reservoir Data
+
+**Source:** Norwegian Water Resources and Energy Directorate (NVE)
+
+Reservoir statistics were retrieved from the NVE public API.
+
+The dataset includes:
+
+- Date
+- Year
+- Week
+- Reservoir filling level
+- Reservoir capacity
+- Stored hydropower energy
+- Previous week reservoir filling
+- Weekly change in reservoir filling
+- Electricity price area
+
+The reservoir dataset was used to analyse:
+
+- Average reservoir filling
+- Seasonal reservoir patterns
+- Regional hydrological differences
+- Weekly reservoir changes
+- Reservoir conditions in relation to electricity spot prices
