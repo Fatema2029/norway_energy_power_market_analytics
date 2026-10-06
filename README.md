@@ -323,5 +323,3 @@ ADDCOLUMNS(
     "Quarter", "Q" & FORMAT([Date], "Q"),
     "Year-Month", FORMAT([Date], "YYYY-MM")
 )
-
-
