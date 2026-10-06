@@ -762,22 +762,60 @@ Therefore, relationships identified in the dashboard should not be interpreted a
 
 ## Future Improvements
 
-This project could be extended further by adding additional datasets and analytical techniques.
+The project could be extended further in several practical ways.
 
-Possible future developments include:
+### 1. Add Weather and Temperature Data
 
-- Electricity import and export analysis
-- Cross-border electricity-flow analysis
-- Transmission congestion analysis
-- Weather and temperature data
-- Precipitation and snowmelt data
-- Electricity demand forecasting
-- Spot-price forecasting
-- Hydropower generation forecasting
-- Python integration
-- Machine-learning models
-- Automated API refresh
-- Improved geographic visualisation of NO1–NO5
-- More advanced scenario and trend analysis
+Weather conditions have a strong influence on electricity demand and hydropower availability.
 
-These additions could provide a deeper understanding of the factors influencing electricity demand, generation, hydrology, and market prices.
+A future version could integrate temperature, precipitation, and snowmelt data and connect them to the existing Date dimension.
+
+This would make it possible to analyse questions such as:
+
+- How strongly does temperature affect electricity consumption?
+- Do periods of higher precipitation lead to improved reservoir conditions?
+- How do weather changes influence electricity prices?
+
+---
+
+### 2. Include Electricity Import and Export Data
+
+Norway is connected to neighbouring electricity markets through several interconnectors.
+
+Adding import and export data would provide a more complete explanation of regional energy balances and price movements.
+
+The data could be added as a new fact table and connected through Date and relevant market-area dimensions.
+
+This would allow analysis of:
+
+- Net electricity imports and exports
+- Cross-border electricity flows
+- How international electricity trade relates to Norwegian spot prices
+
+---
+
+### 3. Develop Forecasting Models
+
+The current dashboard focuses on historical analysis.
+
+A future version could introduce forecasting for:
+
+- Electricity consumption
+- Spot prices
+- Reservoir filling
+
+Forecasting could be developed using Power BI forecasting features, Python, or statistical and machine-learning models.
+
+Historical trends, seasonality, weather variables, and reservoir conditions could be used as predictive inputs.
+
+---
+
+### 4. Automate Data Refresh
+
+The current project uses several public data sources, including API-based reservoir data.
+
+A future version could automate data retrieval and refresh so that the dashboard remains up to date with minimal manual work.
+
+This could be implemented through API connections, Power Query, and scheduled refresh in the Power BI Service.
+
+Automated refresh would make the project more suitable for continuous energy-market monitoring rather than only historical analysis.
