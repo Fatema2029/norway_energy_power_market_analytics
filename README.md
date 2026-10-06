@@ -301,44 +301,6 @@ This setup allows the same Year and Price Area slicers to filter multiple datase
 
 ---
 
-## Date Table
-
-A dedicated Date table was created to support consistent time-based analysis across the project.
-
-```DAX
-DateTable =
-VAR AllDates =
-    UNION(
-        SELECTCOLUMNS(Consumption, "DateValue", Consumption[Date]),
-        SELECTCOLUMNS(Production, "DateValue", Production[Date]),
-        SELECTCOLUMNS(SpotPrice, "DateValue", SpotPrice[Date])
-    )
-RETURN
-ADDCOLUMNS(
-    CALENDAR(
-        MINX(AllDates, [DateValue]),
-        MAXX(AllDates, [DateValue])
-    ),
-    "Year", YEAR([Date]),
-    "Month Number", MONTH([Date]),
-    "Month", FORMAT([Date], "MMMM"),
-    "Quarter", "Q" & FORMAT([Date], "Q"),
-    "Year-Month", FORMAT([Date], "YYYY-MM")
-)
-```
-
-A separate sorting column was also created to ensure that Year-Month values appear in chronological order.
-
-```DAX
-YearMonthSort =
-YEAR(DateTable[Date]) * 100 +
-MONTH(DateTable[Date])
-```
-
-The `Year-Month` field was then sorted by `YearMonthSort`.
-
----
-
 ## Price Area Dimension
 
 A dedicated Price Area dimension was used to standardise Norway's five electricity bidding zones across the different datasets.
