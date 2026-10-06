@@ -760,71 +760,24 @@ Important factors not fully included in the current model include:
 
 Therefore, relationships identified in the dashboard should not be interpreted as proof of causation.
 
-## Tools and Skills Used
+## Future Improvements
 
-This project demonstrates practical experience with the following tools and analytical techniques:
+This project could be extended further by adding additional datasets and analytical techniques.
 
-### Power BI Desktop
+Possible future developments include:
 
-Used to build the complete interactive dashboard, including KPI cards, line charts, bar charts, donut charts, slicers, and combined visuals.
+- Electricity import and export analysis
+- Cross-border electricity-flow analysis
+- Transmission congestion analysis
+- Weather and temperature data
+- Precipitation and snowmelt data
+- Electricity demand forecasting
+- Spot-price forecasting
+- Hydropower generation forecasting
+- Python integration
+- Machine-learning models
+- Automated API refresh
+- Improved geographic visualisation of NO1–NO5
+- More advanced scenario and trend analysis
 
-### Power Query
-
-Used for data preparation and transformation, including:
-
-- Removing unnecessary columns
-- Cleaning and standardising data
-- Changing data types
-- Extracting dates and hours
-- Creating new columns
-- Unpivoting spot-price data
-- Filtering records
-- Preparing API-based reservoir data
-
-### DAX
-
-Used to create calculated measures for:
-
-- Total electricity consumption
-- Total electricity production
-- Energy balance
-- Renewable share
-- Average spot price
-- Average reservoir filling
-- Average weekly reservoir change
-- Hourly consumption and production analysis
-
-### Data Modelling
-
-A structured model was created using shared dimension tables for:
-
-- Date
-- Price Area
-
-This allowed multiple fact tables to be filtered consistently across the report.
-
-### Data Visualisation
-
-The project applies different visual types depending on the analytical question, including:
-
-- KPI cards
-- Line charts
-- Clustered column charts
-- Horizontal bar charts
-- Donut charts
-- Combination charts
-- Secondary Y-axes
-- Interactive slicers
-
-### Analytical Skills
-
-The project also strengthened practical skills in:
-
-- Time-series analysis
-- Regional comparison
-- Energy-market analysis
-- Hydrology analysis
-- Data cleaning
-- Data transformation
-- Business-oriented dashboard design
-- Interpretation of relationships between multiple datasets
+These additions could provide a deeper understanding of the factors influencing electricity demand, generation, hydrology, and market prices.
